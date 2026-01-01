@@ -7,8 +7,15 @@
 body {
     width: 100%;
     min-height: 100vh;
-    background-image: url("bg.png");
-    background-size: cover;
+    background-color: #0B0B0D;
+  color: #B0B0B0;
+  /* font-family: 'Montserrat', sans-serif; */
+}
+
+h1, h2, h3, p {
+  color: #E6E6E6;
+  font-family: 'Cinzel', serif;
+  text-shadow: 0 0 6px rgba(201, 182, 228, 0.4);
 }
 
 .nav-menu ul {
@@ -18,33 +25,76 @@ body {
     gap: 20px;
 }
 
+.nav-logos img {
+    
+}
+
 .nav-links a {
     text-decoration: none;
-    color: black;
     font-size: 18px;
     font-weight: 500;
 }
 
+a {
+  color: #8A1F3D;
+  transition: 0.4s;
+  text-shadow: 0 0 8px rgba(138, 31, 61, 0.6);
+
+}
+
+a:hover {
+  color: #C72C41;
+}
+
 nav {
     height: 80px;
-    background-color: rgba(179, 179, 179, 0.3);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;  
+    background-color: #120F1A;
+}
+.header {
+    background-color: #120F1A;
+    padding: 10px 0px;
 }
 
-header h1 {
-    text-shadow: 0 0 16px rgba(182, 140, 152, 0.6);
+.header h1 {
     text-align: center;
     margin: 20px 0;
     font-size: 58px;
     font-weight: 700;
-    color: #8A1F3D;
+  font-family: 'Cinzel', serif;
 }
 
+.section1 {
+    display: flex;
+    background-color: #120F1A;
+    margin-bottom: 64px;
+}
+
+.section1 .about {
+    flex: 1;
+    padding: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.section1 .gambar-section1 {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    background-size: cover;
+    justify-content: center;
+}
+
+.gambar-section1 img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(201, 182, 228, 0.4);;
+}
 
 .main_card {
     display: flex;
@@ -55,5 +105,14 @@ header h1 {
     padding: 20px;
 }
 
-.card1, .card2, .card3, .card4, .card5 {
+.card1 img, .card2 img, .card3 img, .card4 img, .card5 img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(201, 182, 228, 0.4);
+}
+
+footer {
+    width: auto;
+    height: 60px;
+    /* background-color: rgb(43, 77, 107); */
+    backdrop-filter: blur(10px);
 }
