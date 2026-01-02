@@ -16,7 +16,7 @@ body {
 h1, h2, h3, p {
   color: #E6E6E6;
   font-family: 'Cinzel', serif;
-  text-shadow: 0 0 6px rgba(201, 182, 228, 0.4);
+  text-shadow: 0 0 20px rgba(51, 2, 121, 0.4);
 }
 
 a {
@@ -55,10 +55,20 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;  
-    background-color: #120F1A;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 /* Header part */
+
+.header {
+    width: auto;
+    height: 100vh;
+    background-image: url(gambar/bgheader.jpg);
+    background-size: cover;
+}
 
 .header {
     background-color: #120F1A;
@@ -68,7 +78,8 @@ nav {
 .header h1 {
     text-align: center;
     margin: 20px 0;
-    font-size: 58px;
+    margin-top: 100px;
+    font-size: 150px;
     font-weight: 700;
   font-family: 'Cinzel', serif;
 }
@@ -79,9 +90,14 @@ nav {
     display: flex;
     background-color: #120F1A;
     margin-bottom: 64px;
+    min-height: 100vh;
 }
 
 .section1 .about {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
     flex: 1;
     padding: 40px;
     font-size: 18px;
@@ -95,12 +111,141 @@ nav {
     width: 100%;
     background-size: cover;
     justify-content: center;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .gambar-section1 img {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(201, 182, 228, 0.4);;
 }
+
+.gambar-section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Musik */
+
+/* override player lama */
+.player {
+    height: auto;
+}
+
+.wrapper {
+    width: 360px;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+}
+
+.wrapper {
+    background: rgba(20,20,30,0.85);
+    color: white;
+}
+
+.wrapper {
+    width: 360px;
+    background: rgba(20,20,30,0.85);
+    backdrop-filter: blur(12px);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(180,120,255,0.25);
+}
+
+.track-art {
+    width: 180px;
+    height: 180px;
+    margin: 15px;
+}
+
+
+
+.seek_slider,
+.volume_slider {
+    background: #6c5ce7;
+}
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+    border-color: #a29bfe;
+}
+
+.mini-player {
+    width: 100%;
+    max-width: 600px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 12px 20px;
+    background: rgba(18, 15, 26, 0.9);
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 15px rgba(180,120,255,0.25),
+        inset 0 0 10px rgba(255,255,255,0.05);
+
+    font-family: 'Cinzel', serif;
+}
+
+/* Info lagu */
+.song-info {
+    flex: 1;
+}
+
+.song-title {
+    font-size: 16px;
+    color: #E6E6E6;
+}
+
+.song-artist {
+    font-size: 13px;
+    color: #A58BFF;
+}
+
+/* Kontrol */
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #E6E6E6;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    color: #C9B6FF;
+    text-shadow: 0 0 8px rgba(180,120,255,0.8);
+}
+
+/* Progress bar */
+.progress {
+    width: 120px;
+    height: 4px;
+    appearance: none;
+    background: #3A3550;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.progress::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #B478FF;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(180,120,255,0.8);
+}
+
+
 
 /* Gambar character part */
 
@@ -111,6 +256,7 @@ nav {
     flex-wrap: wrap;
     gap: 10px;
     padding: 20px;
+    height: 100vh;
 }
 
 .card1 {
@@ -202,8 +348,10 @@ nav {
 /* Footer part */
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: auto;
     height: 60px;
-    /* background-color: rgb(43, 77, 107); */
-    backdrop-filter: blur(10px);
+    background-color: #120F1A;
 }

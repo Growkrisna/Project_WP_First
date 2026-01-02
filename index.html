@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The portofolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <nav>
             <div class="nav-logo"><img width="100" src="https://static.wikitide.net/bandoriwiki/thumb/3/37/Ave_Mujica_logo.png/242px-Ave_Mujica_logo.png" alt=""></div>
-            <div class="nav-menu">
+            <!-- <div class="nav-menu">
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#info">Information</a></li>
                     <li><a href="#need">Character</a></li>
                 </ul>
-            </div>
+            </div> -->
     </nav>
     <main>
         <div class="header">
@@ -28,6 +31,23 @@
             </div>
             <div class="gambar-section1">
                 <img width="500px" src="/gambar/section1.jpg" alt="">
+                <div class="mini-player">
+    <div class="song-info">
+        <div class="song-title">Symbol I : △</div>
+        <div class="song-artist">Ave Mujica</div>
+    </div>
+
+    <div class="controls">
+        <button onclick="playPause()">▶</button>
+    </div>
+
+    <input type="range" class="progress" value="0">
+</div>
+
+<audio id="audio">
+    <source src="audio/avemujica.mp3" type="audio/mpeg">
+</audio>
+
             </div>
         </div>
         <div class="main_card">
