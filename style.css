@@ -62,15 +62,13 @@ nav {
 .header {
     width: auto;
     height: 100vh;
-    background-image: url(gambar/bgheader.jpg);
-    background-size: cover;
-    scroll-snap-align: start;
-}
-
-.header {
     background-color: #120F1A;
     padding: 10px 0px;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
+
 
 .header::before {
     content: "";
@@ -94,11 +92,6 @@ nav {
   z-index: 1;
 }
 
-.header {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
 
 /* Layer background parallax */
 .header-bg {
