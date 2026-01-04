@@ -178,32 +178,113 @@ nav {
     display: flex;
     justify-content: center;
     align-items: start;
+    pointer-events: none;
 }
 
-.sakiko { background-image: url(gambar/headereffect1.png);}
-.mutsumi { background-image: url(gambar/headereffect2.png);}
-.umiri { background-image: url(gambar/headereffect3.png);}
-.nyamu { background-image: url(gambar/headereffect4.png);}
-.uika { background-image: url(gambar/headereffect5.png);}
+.uika { background-image: url(gambar/headereffect1.png);}
+.sakiko { background-image: url(gambar/headereffect2.png);}
+.nyamu { background-image: url(gambar/headereffect3.png);}
+.umiri { background-image: url(gambar/headereffect4.png);}
+.mutsumi { background-image: url(gambar/headereffect5.png);}
 
 .header-characters {
-    z-index: 2;
-    width: 100%;
-    height: auto;
-    position: absolute;
-    inset: 0;
-    background-size: cover;
     display: flex;
-    justify-content: center;
-    gap: 0;
+    position: absolute;
+    height: auto;
+    z-index: 2;
+    inset: 0;
 }
 
 .char {
+    position: relative;
+    cursor: pointer;
     width: 20%;
     height: 100%;
     background-size: cover;
     background-position: center;
+    flex: 1;
+    opacity: 0.3;
+    transition: all 0.5s ease;
+    filter: grayscale(60%);
 }
+
+.char:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+.header-characters:hover ~ .header-bg {
+  filter: brightness(0.2);
+}
+
+.char::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.char:hover::after {
+     content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(var(--glow-rgb), 0.35),
+    rgba(0, 0, 0, 0.85)
+  );
+  box-shadow:
+    inset 0 0 60px rgba(var(--glow-rgb), 0.6),
+    0 0 80px rgba(var(--glow-rgb), 0.5);
+  pointer-events: none;
+}
+
+.char-name {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  color: #ffffff;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  opacity: 0;
+  transition: all 0.4s ease;
+  text-shadow: 0 0 10px rgba(var(--glow-rgb), 0.8);
+}
+
+.char:hover .char-name {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Sakiko – Purple */
+.char.sakiko {
+  --glow-rgb: 138, 43, 226;
+}
+
+/* Mutsumi – Green */
+.char.mutsumi {
+  --glow-rgb: 46, 204, 113;
+}
+
+/* Umiri – Yellow/Gold */
+.char.umiri {
+  --glow-rgb: 255, 215, 0;
+}
+
+/* Nyamu – Pink */
+.char.nyamu {
+  --glow-rgb: 255, 20, 147;
+}
+
+/* Uika – Blue */
+.char.uika {
+  --glow-rgb: 0, 191, 255;
+}
+
+
 
 
 
