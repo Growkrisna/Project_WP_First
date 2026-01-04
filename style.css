@@ -57,6 +57,63 @@ nav {
     z-index: 100;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Header part */
 
 .header {
@@ -116,12 +173,95 @@ nav {
 /* Konten header */
 .header-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: start;
 }
+
+.sakiko { background-image: url(gambar/headereffect1.png);}
+.mutsumi { background-image: url(gambar/headereffect2.png);}
+.umiri { background-image: url(gambar/headereffect3.png);}
+.nyamu { background-image: url(gambar/headereffect4.png);}
+.uika { background-image: url(gambar/headereffect5.png);}
+
+.header-characters {
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.char {
+    width: 20%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Section part */
@@ -165,6 +305,59 @@ nav {
     justify-content: center;
     align-items: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Gambar character part */
 
