@@ -30,6 +30,32 @@ a:hover {
   color: #C72C41;
 }
 
+/* Sakiko – Purple */
+.char.sakiko {
+  --glow-rgb: 138, 43, 226;
+}
+
+/* Mutsumi – Green */
+.char.mutsumi {
+  --glow-rgb: 46, 204, 113;
+}
+
+/* Umiri – Yellow/Gold */
+.char.umiri {
+  --glow-rgb: 0, 191, 255;
+}
+
+/* Nyamu – Pink */
+.char.nyamu {
+  --glow-rgb: 255, 20, 147;
+}
+
+/* Uika – Blue */
+.char.uika {
+  --glow-rgb: 255, 215, 0;
+}
+
+
 /* Navbar part */
 
 .nav-menu ul {
@@ -259,30 +285,6 @@ nav {
   transform: translateX(-50%) translateY(0);
 }
 
-/* Sakiko – Purple */
-.char.sakiko {
-  --glow-rgb: 138, 43, 226;
-}
-
-/* Mutsumi – Green */
-.char.mutsumi {
-  --glow-rgb: 46, 204, 113;
-}
-
-/* Umiri – Yellow/Gold */
-.char.umiri {
-  --glow-rgb: 255, 215, 0;
-}
-
-/* Nyamu – Pink */
-.char.nyamu {
-  --glow-rgb: 255, 20, 147;
-}
-
-/* Uika – Blue */
-.char.uika {
-  --glow-rgb: 0, 191, 255;
-}
 
 
 
@@ -442,6 +444,18 @@ nav {
 
 /* Gambar character part */
 
+.card1 { --glow-rgb: 138, 43, 226; } /* Sakiko - Purple */
+.card2 { --glow-rgb: 46, 204, 113; } /* Mutsumi - Green */
+.card3 { --glow-rgb: 255, 20, 147; } /* Nyamu - Pink */
+.card4 { --glow-rgb: 0, 191, 255; } /* Uika - Blue */
+.card5 { --glow-rgb: 255, 215, 0; } /* Umiri - Yellow */
+
+.card-desc {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
 .main_card {
     display: flex;
     justify-content: space-between;
@@ -466,8 +480,8 @@ nav {
     border-radius: 15px;
     position: relative;
     box-shadow:
-        0 0 15px rgba(180, 120, 255, 0.3),
-        0 0 30px rgba(180, 120, 255, 0.2);    
+        0 0 15px rgba(var(--glow-rgb), 0.3),
+        0 0 30px rgba(var(--glow-rgb), 0.2);    
 }
 
 .card1:hover .card,
@@ -495,6 +509,14 @@ nav {
 
 .back-page{
     transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 40px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: overlay;
 }
 
 .card1 .front-page { background-image: url(gambar/Togawa_Sakiko.jpg); }
@@ -503,11 +525,11 @@ nav {
 .card2 .front-page { background-image: url(gambar/Wakaba_Mutsumi.jpg); }
 .card2 .back-page  { background-image: url(gambar/WakabaMutsumi.jpg); }
 
-.card3 .front-page { background-image: url(gambar/Yahata_Umiri.jpg); }
-.card3 .back-page  { background-image: url(gambar/YahataUmiri.jpg); }
+.card3 .front-page { background-image: url(gambar/Yuutenji_Nyamu.jpg); }
+.card3 .back-page  { background-image: url(gambar/YuutenjiNyamu.jpg); }
 
-.card4 .front-page { background-image: url(gambar/Yuutenji_Nyamu.jpg); }
-.card4 .back-page  { background-image: url(gambar/YuutenjiNyamu.jpg); }
+.card4 .front-page { background-image: url(gambar/Yahata_Umiri.jpg); }
+.card4 .back-page  { background-image: url(gambar/YahataUmiri.jpg); }
 
 .card5 .front-page { background-image: url(gambar/Misumi_Uika.jpg); }
 .card5 .back-page  { background-image: url(gambar/MisumiUika.jpg); }
@@ -519,9 +541,9 @@ nav {
     border-radius: 18px;
     background: linear-gradient(
         120deg,
-        rgba(180,120,255,0.6),
-        rgba(120,80,255,0.3),
-        rgba(200,150,255,0.6)
+        rgba(var(--glow-rgb),0.6),
+        rgba(var(--glow-rgb),0.3),
+        rgba(var(--glow-rgb),0.6)
     );
     filter: blur(18px);
     opacity: 0;
@@ -538,13 +560,210 @@ nav {
     opacity: 1;
 }
 
+.back-page h3, .back-page p {
+  position: relative;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.back-page h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.back-page p {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.back-page .emotion {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.music-section {
+  padding: 120px 8%;
+  background: #120F1A;
+}
+
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-size: 36px;
+  text-align: center;
+  color: #E6E6E6;
+  margin-bottom: 80px;
+  letter-spacing: 4px;
+}
+
+.music-grid {
+  display: grid;
+  gap: 40px;
+}
+
+.music-card {
+  position: relative;
+  height: 180px;
+  background: linear-gradient(145deg, #120F1A, #0B0B0D);
+  border: 1px solid #3A1C5A;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.6s ease;
+}
+
+.music-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(138, 31, 61, 0.25);
+  opacity: 0;
+  transition: 0.6s ease;
+}
+
+.music-card:hover::before {
+  opacity: 1;
+}
+
+.music-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(138, 31, 61, 0.5);
+}
+
+.music-overlay {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: 0.6s ease;
+}
+
+.music-card:hover .music-overlay {
+  transform: translateY(0);
+}
+
+.music-overlay h3 {
+  font-family: 'Cinzel', serif;
+  color: #E6E6E6;
+  margin-bottom: 6px;
+}
+
+.music-overlay p {
+  font-size: 14px;
+  color: #B0B0B0;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.galeri-section {
+    padding: 120px 15%;
+    background-color: #120F1A;
+}
+
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Force 3 columns */
+    gap: 30px;
+}
+
+.galeri-item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #3A1C5A;
+  background: #0B0B0D;
+  aspect-ratio: 16 / 9; /* Make frames landscape */
+}
+
+.galeri-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%);
+  transition: 0.8s ease;
+}
+
+.galeri-item:hover img {
+  transform: scale(1.1);
+  filter: grayscale(0%) brightness(1);
+}
+
+
+
+
+
 /* Footer part */
 
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: 60px;
-    background-color: #120F1A;
+.c-footer {
+  background: radial-gradient(circle at top, #120F1A, #0B0B0D);
+  padding: 100px 20px 60px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.footer-quote {
+  font-family: 'Cinzel', serif;
+  color: #C9B6E4;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.footer-line {
+  width: 100%;
+  height: 1px;
+  background: #3A1C5A;
+  margin: 0 auto 40px;
+}
+
+.footer-credit {
+  color: #b0b0b0;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-credit span {
+  color: #E6E6E6;
+  font-weight: 500;
+}
+
+.footer-medsos a {
+  margin: 0 12px;
+  color: #B0B0B0;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.footer-medsos a:hover {
+  color: #C72C41;
 }
