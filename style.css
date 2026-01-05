@@ -713,7 +713,10 @@ nav {
   filter: grayscale(0%) brightness(1);
 }
 
-
+.galeri-item.aston {
+  position: relative;
+  grid-column: span 3;
+}
 
 
 
