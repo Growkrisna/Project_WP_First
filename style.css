@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
     min-height: 100vh;
     background-color: #0B0B0D;
   color: #B0B0B0;
-  /* font-family: 'Montserrat', sans-serif; */
+  overflow-x: hidden;
 }
 
 h1, h2, h3, p {
@@ -464,6 +465,7 @@ nav {
     gap: 10px;
     padding: 20px;
     height: 100vh;
+    height: auto;
 }
 
 .card1 {
@@ -769,4 +771,71 @@ nav {
 
 .footer-medsos a:hover {
   color: #C72C41;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .header-characters {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 20px;
+  }
+
+  .char {
+    min-width: 140px;
+    height: 220px;
+  }
+
+  .header-content h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .section1 {
+    flex-direction: column;
+    padding: 80px 20px;
+  }
+
+  .about{
+    text-align: center;
+  }
+
+  .gambar-section1 img {
+    width: 100%;
+    max-width: 360px;
+    margin-top: 40px;
+  }
+
+  .main_card{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .music-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .music-card{
+    height: 200px;
+  }
+
+    .music-overlay {
+    transform: translateY(0);
+    background: rgba(11,11,13,0.5);
+  }
+}
+
+@media (hover: none) {
+  .music-card:hover,
+  .gallery-item:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
