@@ -784,13 +784,11 @@ nav {
   .header-characters {
     display: flex;
     overflow-x: auto;
-    gap: 16px;
-    padding-bottom: 20px;
   }
 
   .char {
     min-width: 140px;
-    height: 220px;
+    height: 100%;
   }
 
   .header-content h1 {
@@ -826,10 +824,11 @@ nav {
     height: 200px;
   }
 
-    .music-overlay {
+  .music-overlay {
     transform: translateY(0);
     background: rgba(11,11,13,0.5);
-  }
+}
+
 }
 
 @media (hover: none) {

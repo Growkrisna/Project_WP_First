@@ -1,7 +1,13 @@
-const headerBg = document.querySelector(".header-bg");
+const headerBg = document.querySelector('.header-bg');
 
-window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
-    headerBg.style.transform = `translateY(${scrollY * 0.4}px)`;
+function isDesktop() {
+  return window.innerWidth > 768;
+}
+
+window.addEventListener('scroll', () => {
+  if (!isDesktop()) return;
+
+  const scrollY = window.scrollY;
+  headerBg.style.transform = `translateY(${scrollY * 0.3}px)`;
 });
 
