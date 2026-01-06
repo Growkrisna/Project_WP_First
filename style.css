@@ -812,8 +812,10 @@ nav {
   }
 
   .main_card{
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    height: auto;
   }
 
   .music-grid{
@@ -836,5 +838,62 @@ nav {
   .gallery-item:hover {
     transform: none;
     box-shadow: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .header h1 {
+      font-size: 48px;
+      margin-top: 120px;
+  }
+
+  .header-characters {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: flex-start;
+  }
+
+  .char {
+      min-width: 120px;
+  }
+
+  .section1 {
+      padding: 40px 20px;
+  }
+  
+  .section1 .about {
+       padding: 0 0 30px 0;
+  }
+
+  .gambar-section1 img {
+      width: 100%;
+      height: auto;
+  }
+
+
+  .main_card {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+  }
+
+  .card {
+      height: 280px;
+  }
+
+  .galeri-grid {
+      grid-template-columns: 1fr;
+  }
+  
+  .galeri-section {
+      padding: 60px 20px;
+  }
+  
+  .galeri-item.aston {
+      grid-column: span 1;
+  }
+
+  .music-section {
+    padding: 60px 20px;
   }
 }
