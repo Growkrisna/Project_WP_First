@@ -608,6 +608,8 @@ nav {
 .music-section {
   padding: 120px 8%;
   background: #120F1A;
+  position: relative;
+  z-index: 3;
 }
 
 .section-title {
