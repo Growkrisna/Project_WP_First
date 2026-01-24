@@ -6,12 +6,36 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100%;
     min-height: 100vh;
     background-color: #0B0B0D;
-  color: #B0B0B0;
-  overflow-x: hidden;
+    color: #B0B0B0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar Custom */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0B0B0D; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3A1C5A; 
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8A1F3D; 
 }
 
 h1, h2, h3, p {
@@ -77,7 +101,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;  
+    padding: 0 40px;  
     position: fixed;
     top: 0;
     width: 100%;
@@ -365,12 +389,29 @@ nav {
 .section1 .about {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     flex: 1;
-    padding: 40px;
+    padding: 60px; /* Increased padding for breathability */
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.8; /* Better readability */
+    color: #cccccc;
+}
+
+.section1 .about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.section1 .about h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #8A1F3D;
+    margin-top: 10px;
+    border-radius: 2px;
 }
 
 .section1 .gambar-section1 {
@@ -381,12 +422,21 @@ nav {
     background-size: cover;
     justify-content: center;
     flex-direction: column;
-    gap: 24px;
+    gap: 30px;
+    padding: 40px;
 }
 
 .gambar-section1 img {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(201, 182, 228, 0.4);;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    max-width: 90%; /* Ensure responsiveness */
+    height: auto;
+}
+
+.gambar-section1 img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(138, 31, 61, 0.3);
 }
 
 .gambar-section1 {
@@ -629,11 +679,12 @@ nav {
 .music-card {
   position: relative;
   height: 180px;
-  background: linear-gradient(145deg, #120F1A, #0B0B0D);
+  background: linear-gradient(145deg, #16131f, #0B0B0D);
   border: 1px solid #3A1C5A;
   overflow: hidden;
   cursor: pointer;
-  transition: 0.6s ease;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 12px;
 }
 
 .music-card::before {
@@ -711,9 +762,17 @@ nav {
 .galeri-item {
   position: relative;
   overflow: hidden;
-  border: 1px solid #3A1C5A;
+  border: 1px solid rgba(58, 28, 90, 0.5);
   background: #0B0B0D;
   aspect-ratio: 16 / 9; /* Make frames landscape */
+  border-radius: 12px; /* Smoother corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.galeri-item:hover {
+    border-color: #8A1F3D;
+    box-shadow: 0 8px 20px rgba(138, 31, 61, 0.2);
 }
 
 .galeri-item img {
