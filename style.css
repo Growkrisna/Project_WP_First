@@ -508,11 +508,12 @@ nav {
 
 .card-desc {
     text-align: center;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
     padding-top: 64px;
     position: relative;
     z-index: 10;
     background-color: #0B0B0D;
+    font-size: 24px;
 }
 
 .main_card {
